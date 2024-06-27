@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiendita cool</title>
     <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Accesorios</h1>
+    <header>
+    <div class="logo">
+    <a href="#">
+   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG2UlEQVR4nO1b648URRBvVPCBxheKxgcqpyabsLtTv9nb9UCPIIpGTcSIf4FRQAkKgmhi9KuED5zGiBgJKOBHkMAJKKAQkEMQHx/E8ArCN+EwkdcdxjPlNma2qJ6d2ZvZ202ukk4uN11dj+6u/lV1rzGDNEipUjabHU5Ek4joDQBLAewkooMAugH02NZt//cd97F9HwVwlWlGKhaLIwG8CmAbgF4AfTU2ds5WIpqZzWZvNo1Onuc9BGANEZ3vh9Gu1ktEXwAYZxqNAIznmUrBaLUR0Tfs7EYw/FYAKyIovI+IFgGYSkQTAIweM2bM9QCGcrN/j7bfpnFfIvqtyrj/ENGnvN0GyvhnAZwMUfAnALNaW1tvr1WG7/t3AJhtx3LJ4QA62dSLWlpaLgfwgWtWAKz1fb8tabkAxhLROitDk9uRyWSGmTSpra3tGgCbHMbvBtCaqgLGGCIqAdjj2GobM5nM1akIzufzN1kjpdCzfExNmTLlUlMnYllE9AqAc4o+uwCMSGPmdyte3+/7vmcGiAAQgAOaExJbCS3lPa8t+x2lUukGM8BUKBRuZHSp6LchkZgAPeBtYIhrGgtub1T0XJjEUdcnlldXIxl/gThvIKLtClaY3B+Qc1Lu+UZY9i7i4GeTqgqcUFMegYsRHkdcMg1Onuf5yumwtBZs3yeW/kzTJGTRo9wKD8YZYKsEOfU85xPCCT8IGzbHSWn7BMxMHeGlAZ2VU2FsFMY1gmmtaVICsF5s49WhDMVicaQsZqSR2NSLeN+LyexlSO9kADBLeOyXwLcnAByrkqMzz1Hf9x8PU4wRGhE9R0QruVYA4FQ1vlwudx0RzQHwvT2eT1rczwHv2hCbfhY6zghzwDbReVbAm0erGR9wwu8uGZ7nPaOc1aF8tlDidL7VbbyDd47ou0VVLJvNDrdFyP87B4sZUY0PMeQSAPPj8gF4RMv6FN6zvu9PVBw+SuKZUql0peapSWLAfUKRyMZ7nveYYsj8uHwWjXbHcP6fuVzuNkX2fhHXJmoOeFMo9GGYA0wM4mWvKMuz2gGg6MotiOhzoRMH6LcY8nIwI6K3iehvMe4KxQEfiT7zNGHLRKepSTjABjy554/l8/lcFaeNUoybpuj9kuKkO8P6AFhykUCUb2WCA01IwgEc7eXMVzPeypsn9OkyxgxRug5RijVzgx14yYuxtmsCDwc75XK5uxJywErB21ELiAHwfIiMF4SBncIB94jvh7RBTgQ7ybQ3RhCsOM+V+n4kWA3gSJAvn8/f6+rr+/79QsZhMdYI8f0PTWBPsJMsJ8WIxBXHGYC/xLiRanVEdCbI197efoWrL38TOpxWynoV27DhHQDgdFQHcDVI6HAqtgMouS1QcZ4rW6BYyxYoFAr3pb0FDgc7tba23h3mgChGaJUlInovIt+XUYMggBeFjHXi++iqQRB1PAYLhUK+hmNwV8gxuKffxyClCISUy4tj1ZxggVBFak5E0xVHzRB9zvOlamwgROVnKcGBFiXhADv2ZCVe9BDR+57nPeAKjBJDMDJk+MtVXm4A3lHQ4nLFSYtFn9fTTIaOank9Eb0bl69QKNwig3OVMU4wj+KAihXoed7DrqOkJ9gxuJSiKhGWDkdwwkV8vH851Y0g84xmmEyHeSw1HXZUg2cnXRAB8LRMT6vxcbGDv4XIPOJ6MsMBMXJ1mMpXzmpJjJdnFCe46gFCqaH22m05gF8ZLFXj47IXTwgnRYGSWJd9jRa5JMYB0alYthxYemOXkpunKNpT9e0AlZ+iOUFFMxHfYgsHrIrCNE65ViqZJiPFjuglfgDfCuY9TXg1tlfY8HXkAbzy9VjFaywOkKZJiIhek6s49gUPgM/EIOeICKbByff9gsQzKvSN+OC5Wwx0gN/kmAYlWyk+JFbu8dDrsDAioieVrZDcC6wEySLZHXLpM/Dq78AdCtjZ2EjvhHhCiOgrBZgtSGLwYY4XWDsTf5BY+7LvUiapkxFnYh5G+VZWCjnIb3LMAAY8uedTe8mG8gusXY4rrtnt7e2XmToRy7JHXY9mfGqBOlNeCRJeXhC8tx55g0V4Pzp06Ew9NmXKJa6Fjmfr3NbHepEVL7FRnW91WZDYno9CNq93Xl1zKs2PE7ggYWokW8yYy2OFyDnued5TZiCoWH5TtCxkNVxoXABZzEVNrvB4ntfC9w68mrjx33z1Zas/0wF87CqaiFlfUjPISXp5EtGWKgon2TY15OMtlH/WsrqfvxV0NY74qxrScMevS2bYVVH1fU/I/uZi6GYALzcC6KqJuAJrb2b4pmcJ43UGULbc/d9PZzmQ2f9tJ6JPuG7PPM7q7SANkkmK/gUCj91Mu2NNzgAAAABJRU5ErkJggg==">
+    </a>
+    <h1>TIENDITA</h1>
+    </div>
+
+    <a href="./cart.html">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6ElEQVR4nO2ZO0tcQRSAv1VBCVhrwG0Eo65CCGLjL1DE1s4gGBFlEVkQ7PILUgQCFjYW4qrrAxG1CiL2NilEsPKBibj4wELwFQZOsYTsLi5zZu4sfnCaYQ57vnvnzs5h4I3o0QucAi8F4grYBT4DMSLKSRGJf2M2qjInOUUe55lTBwwBdzLPvJnI0SMyRqK7yNwvIrJP4FQDlyLTRuDMiUiSwBkWkQyB80FELqK6e72GM5FJEDjzIjJG4IyIyCKB0yIif8rpO2khcBZeeUbTiB0bIqMREDmyIZKIgMhXGyLmI//tUeIZaMQSGY8iP7FI0qPIgE2Rdk8SN8A7myIx+VN0LTKDAiseRLo0RMYdSxxqHYs+OhaZQolYTh+vHU9AHEXWHIlso8yEI5F+bZFPDiSyQI22SIX8kKbIDxyxrizS4UokpSjxC4d0KIqkXIpUyj2KbYkHoB7HbCg0T9/xwKQUME3gdIrIAYFTJU2PWRLvCZwNeSuDlMn9yS6BU5tzrP8GtLo4I2nRB9xb3Ib3fMvYEnkEGnxfmm5KESa2ZCydJyddQo4651JA7pOMy5g58v+PbIEcs6174bZAUdcWc9RZlQK2pJi49NxmbNlijjrNebpGM9ZkMQcXmCWyJOvbhHmqxQoqJYe/S/viCgHGEU4AAAAASUVORK5CYII=">
+    </a>
+    </header>
+
+    <h2>Accesorios</h2>
     <p>Aquí encontrarás todos los accesorios para vivir una vida con <span>menos residuos</span></p>
     
-    <section id="products-container">
+    <section class="lista-productos"  id="products-container">
     </section>
 
-    <a href="./cart.html">Mi Carrito</a>
 </body>
 </html>

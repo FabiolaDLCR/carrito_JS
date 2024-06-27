@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi carrito</title>
     <script defer src="./js/cart.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <h1>Mi Carrito</h1>
+
+    <header>
+        <div class="logo">
+        <a href="./index.html">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG2UlEQVR4nO1b648URRBvVPCBxheKxgcqpyabsLtTv9nb9UCPIIpGTcSIf4FRQAkKgmhi9KuED5zGiBgJKOBHkMAJKKAQkEMQHx/E8ArCN+EwkdcdxjPlNma2qJ6d2ZvZ202ukk4uN11dj+6u/lV1rzGDNEipUjabHU5Ek4joDQBLAewkooMAugH02NZt//cd97F9HwVwlWlGKhaLIwG8CmAbgF4AfTU2ds5WIpqZzWZvNo1Onuc9BGANEZ3vh9Gu1ktEXwAYZxqNAIznmUrBaLUR0Tfs7EYw/FYAKyIovI+IFgGYSkQTAIweM2bM9QCGcrN/j7bfpnFfIvqtyrj/ENGnvN0GyvhnAZwMUfAnALNaW1tvr1WG7/t3AJhtx3LJ4QA62dSLWlpaLgfwgWtWAKz1fb8tabkAxhLROitDk9uRyWSGmTSpra3tGgCbHMbvBtCaqgLGGCIqAdjj2GobM5nM1akIzufzN1kjpdCzfExNmTLlUlMnYllE9AqAc4o+uwCMSGPmdyte3+/7vmcGiAAQgAOaExJbCS3lPa8t+x2lUukGM8BUKBRuZHSp6LchkZgAPeBtYIhrGgtub1T0XJjEUdcnlldXIxl/gThvIKLtClaY3B+Qc1Lu+UZY9i7i4GeTqgqcUFMegYsRHkdcMg1Onuf5yumwtBZs3yeW/kzTJGTRo9wKD8YZYKsEOfU85xPCCT8IGzbHSWn7BMxMHeGlAZ2VU2FsFMY1gmmtaVICsF5s49WhDMVicaQsZqSR2NSLeN+LyexlSO9kADBLeOyXwLcnAByrkqMzz1Hf9x8PU4wRGhE9R0QruVYA4FQ1vlwudx0RzQHwvT2eT1rczwHv2hCbfhY6zghzwDbReVbAm0erGR9wwu8uGZ7nPaOc1aF8tlDidL7VbbyDd47ou0VVLJvNDrdFyP87B4sZUY0PMeQSAPPj8gF4RMv6FN6zvu9PVBw+SuKZUql0peapSWLAfUKRyMZ7nveYYsj8uHwWjXbHcP6fuVzuNkX2fhHXJmoOeFMo9GGYA0wM4mWvKMuz2gGg6MotiOhzoRMH6LcY8nIwI6K3iehvMe4KxQEfiT7zNGHLRKepSTjABjy554/l8/lcFaeNUoybpuj9kuKkO8P6AFhykUCUb2WCA01IwgEc7eXMVzPeypsn9OkyxgxRug5RijVzgx14yYuxtmsCDwc75XK5uxJywErB21ELiAHwfIiMF4SBncIB94jvh7RBTgQ7ybQ3RhCsOM+V+n4kWA3gSJAvn8/f6+rr+/79QsZhMdYI8f0PTWBPsJMsJ8WIxBXHGYC/xLiRanVEdCbI197efoWrL38TOpxWynoV27DhHQDgdFQHcDVI6HAqtgMouS1QcZ4rW6BYyxYoFAr3pb0FDgc7tba23h3mgChGaJUlInovIt+XUYMggBeFjHXi++iqQRB1PAYLhUK+hmNwV8gxuKffxyClCISUy4tj1ZxggVBFak5E0xVHzRB9zvOlamwgROVnKcGBFiXhADv2ZCVe9BDR+57nPeAKjBJDMDJk+MtVXm4A3lHQ4nLFSYtFn9fTTIaOank9Eb0bl69QKNwig3OVMU4wj+KAihXoed7DrqOkJ9gxuJSiKhGWDkdwwkV8vH851Y0g84xmmEyHeSw1HXZUg2cnXRAB8LRMT6vxcbGDv4XIPOJ6MsMBMXJ1mMpXzmpJjJdnFCe46gFCqaH22m05gF8ZLFXj47IXTwgnRYGSWJd9jRa5JMYB0alYthxYemOXkpunKNpT9e0AlZ+iOUFFMxHfYgsHrIrCNE65ViqZJiPFjuglfgDfCuY9TXg1tlfY8HXkAbzy9VjFaywOkKZJiIhek6s49gUPgM/EIOeICKbByff9gsQzKvSN+OC5Wwx0gN/kmAYlWyk+JFbu8dDrsDAioieVrZDcC6wEySLZHXLpM/Dq78AdCtjZ2EjvhHhCiOgrBZgtSGLwYY4XWDsTf5BY+7LvUiapkxFnYh5G+VZWCjnIb3LMAAY8uedTe8mG8gusXY4rrtnt7e2XmToRy7JHXY9mfGqBOlNeCRJeXhC8tx55g0V4Pzp06Ew9NmXKJa6Fjmfr3NbHepEVL7FRnW91WZDYno9CNq93Xl1zKs2PE7ggYWokW8yYy2OFyDnued5TZiCoWH5TtCxkNVxoXABZzEVNrvB4ntfC9w68mrjx33z1Zas/0wF87CqaiFlfUjPISXp5EtGWKgon2TY15OMtlH/WsrqfvxV0NY74qxrScMevS2bYVVH1fU/I/uZi6GYALzcC6KqJuAJrb2b4pmcJ43UGULbc/d9PZzmQ2f9tJ6JPuG7PPM7q7SANkkmK/gUCj91Mu2NNzgAAAABJRU5ErkJggg==">
+        </a>
+        <h1>TIENDITA</h1>
+        </div>
+    
+        <a href="./index.html">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzElEQVR4nO3UMQrCMBiG4RcHJ8HFwdkbeAAnFz2AV/AKXsBb9A5uzoJFpcdQJwdHFwUjgQQklPCnJKKSFz4oxfaBqoWcrAGwBw7m+CONgAugzK7AODU6B+5vqN0DWKQA20BRA7orzGd1O3OubIr2gI0AtdNg3zkX3BA4BqB27jVBzYBbA7RuolrAEnhGQpW5p7cOsIoI2q2Brg+uEqB2lQ8uE8JbyfccGxX3U7BbhkXlR63yj4sv+jupGC+Qc0T0FAJPI+EanYTAuf/pBVcEg4oAM+4VAAAAAElFTkSuQmCC">
+        </a>
+        </header>
+
+    <h2>Mi Carrito</h2>
     
     <section id="cart-section">
     </section>
