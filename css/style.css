@@ -1,9 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 body{
-    .nunito-uniquifier> {
         font-family: "Nunito", sans-serif;
-      }
+}
+.main-container{
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    max-width: 900px;
 }
 header{
-    
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo img{
+    height: 90px;
+    width: auto;
+    align-items: center;
+}
+.cart-btn{
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+}
+p{
+    color:rgb(65, 85, 69) ;
+}
+.products-list {
+    text-align: center;  
+}
+.products-list img{
+width: 180px;
+height: 180px;
+border-radius: 15px;
+}
+.products-list button{
+    border: none;
+    background-color: rgba(0, 100, 20, 0.587);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.cart-modal{
+    background-color: rgb(233, 221, 195);
+    width: 400px;
+    border-radius: 5%;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+body .display-cart .cart-modal{
+    inset: 0 0 0 auto;
+}
+
+.cart-modal h2{
+    text-align: center;
+}
+.cart-modal .cart-checkout-btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.cart-modal .cart-checkout-btn button{
+    background-color: rgba(0, 100, 20, 0.587);
+    color: white;
+    border: solid, 0.1px, rgb(233, 221, 195);
+    font-family: "Nunito", sans-serif;
+    font-weight:bolder;
+    cursor: pointer;
+}
+.cart-modal .cart-checkout-btn button:hover{
+    background-color: white;
+    color: rgb(50, 70, 54);
+}
+.cart-modal .cart-list .item img{
+    width: 100%;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+.cart-modal .cart-list .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap:10px;
+    text-align: center;
+    align-items: center;
+}
+.cart-list .quantity span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 100, 20, 0.587);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cart-list .quantity span:nth-child(2){
+    background-color: transparent;
+    color: black;
+}
+.cart-list .item:nth-child(even){
+    background-color:rgb(200, 190, 169) ;
+}
+.cart-list{
+    overflow: auto;
 }
