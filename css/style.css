@@ -7,6 +7,7 @@ body{
     text-align: center;
     padding-top: 15px;
     max-width: 900px;
+    transition: transform -5s;
 }
 header{
 display: flex;
@@ -45,18 +46,16 @@ border-radius: 15px;
     cursor: pointer;
 }
 .cart-modal{
+    display: none;
     background-color: rgb(233, 221, 195);
     width: 400px;
     border-radius: 5%;
     position: fixed;
-    inset: 0 -400px 0 auto;
+    inset: 0 0 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
+    transition: -5s;
 }
-body .display-cart .cart-modal{
-    inset: 0 0 0 auto;
-}
-
 .cart-modal h2{
     text-align: center;
 }

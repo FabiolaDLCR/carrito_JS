@@ -48,7 +48,15 @@ function renderProductos (productsArray) {
                           <button class="add-btn" id="${producto.id}"> Agregar </button>
                         `
         productsContainer.appendChild(card)
-    })
-    addToCartButton()
+    })   
 }
 renderProductos(productos)
+
+//SHOW CART MODAL//
+let iconCart=document.querySelector('.cart');
+let body = document.querySelector('body');
+
+iconCart.addEventListener('click',() => {
+body.classList.toggle('.display-cart')
+})
+//SHOW CART MODAL//
