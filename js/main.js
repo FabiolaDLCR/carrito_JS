@@ -3,26 +3,36 @@ const productos = [
         id: 1, 
         nombre: "Frasco de vidrio hermético",
         precio: 120, 
+        cantidad:0,
+        img: "./images/frasco-vidrio.jpg"
     },
     {
         id: 2,
         nombre: "popote de acero inoxidable",
-        precio: 35
+        precio: 35,
+        cantidad:0,
+        img: "./images/straw.jpg"
     },
     {
         id: 3,
         nombre: "infusor de acero inoxidable",
-        precio: 45
+        precio: 45,
+        cantidad:0,
+        img: "./images/infusor.jpg"
     },
     {
         id: 4,
         nombre: "Bolsa de tela",
-        precio: 345
+        precio: 345,
+        cantidad:0,
+        img: "./images/totebag.jpg"
     },
     {
         id: 5,
         nombre: "Termo 450ml",
-        precio: 360
+        precio: 360,
+        cantidad:0,
+        img: "./images/termo-inox.jpg"
     }
 ] 
 
@@ -32,11 +42,9 @@ let productsContainer = document.getElementById("products-container")
 function renderProductos (productsArray) {
     productsArray.forEach(producto => {
         const card = document.createElement("div")
-        card.innerHTML = `<h3>${producto.nombre}</h3>
-                          <p>${producto.precio}</p>
-                          <img class="boton-menos" src= "https://img.icons8.com/ios/50/minus.png" alt="quitar" </img>
-                          <input class="cantidad" type="text" value="0">
-                          <img class="boton-mas"  src= "https://img.icons8.com/ios/50/add--v1.png" alt="agregar" </img>
+        card.innerHTML = `<img src="${producto.img}" alt="">
+                          <h3>${producto.nombre}</h3>
+                          <p>$${producto.precio}.00</p>
                           <div class="boton-agregar">
                           <button class="productoAgregar" id="${producto.id}">Agregar </button>
                           </div>`
@@ -48,17 +56,17 @@ renderProductos(productos)
 
 let botonMenos = document.querySelector('.boton-menos');
 let botonMas = document.querySelector('.boton-mas');
-let userInput = document.querySelector ('.cantidad');
+let userInput = document.querySelector('.cantidad');
 
 let userProducts = 0;
  
-botonMas.addEventListener('click', ()=>{
-    userProducts++;
-    userInput.value = userProducts;
+botonMas.addEventListener('click', (e)=>{
+      userProducts++;
+      userInput.value = userProducts;
 });
 
-botonMenos.addEventListener('click', ()=>{
-    userProducts--;
+botonMenos.addEventListener('click', (e)=>{
+  userProducts--;
     if(userProducts <= 0){
     userProducts = 0;
     }
@@ -71,7 +79,7 @@ function addToCartButton () {
         button.onclick = (e) => {
             const productId = e.currentTarget.id
             const selectedProduct = productos.find(producto => producto.id == productId)
-
+  
             cartProducts.push(selectedProduct)
             console.log(cartProducts)
 
@@ -80,6 +88,33 @@ function addToCartButton () {
     })
 }
 addToCartButton()
+
+
+// function restarSumar () {
+//    let userProducts=0;
+
+//    addButton = document.querySelector(".boton-menos")
+//    addButton.forEach(button =>{
+//     button.addEventListener('click', () => {
+//         userProducts--;
+//         if(userProducts <= 0){
+//          userProducts = 0;
+//         }
+//         userInput.value = userProducts;
+//      });
+//    })
+//    addButton = document.querySelector(".boton-mas")
+//    addButton.forEach(button =>{
+//     button.addEventListener('click', () => {
+//         userProducts++;
+//         userInput.value = userProducts;
+//      });
+//    })
+//    }
+// restarSumar()
+
+
+
 
 
 
