@@ -53,10 +53,17 @@ function renderProductos (productsArray) {
 renderProductos(productos)
 
 //SHOW CART MODAL//
-let iconCart=document.querySelector('.cart');
-let body = document.querySelector('body');
+// let iconCart=document.querySelector('.cart');
+// let body = document.querySelector('body');
 
-iconCart.addEventListener('click',() => {
-body.classList.toggle('.display-cart')
-})
+// iconCart.addEventListener('click',() => {
+// body.classList.toggle('.display-cart')
+// })
 //SHOW CART MODAL//
+
+const cartBtn = document.querySelector('.cart');
+const cartModal = document.querySelector ('.cart-modal');
+cartBtn = addEventListener ('click', () => {
+    cartModal.computedStyleMap.display = 'block';
+    
+})
