@@ -150,12 +150,12 @@ listCartProducts.addEventListener ('click', (e) => {
     }
 })
 ////////////////MINUS AND ADD ITEMS BUTTONS///////////////////////////
-let changeQuantity = (productId,type) => {
+let changeQuantity = (productId, type) => {
     let positionItemInCart= cartProducts.findIndex((value) => value.productId == productId);
     if (positionItemInCart >= 0){
         switch(type){
             case 'plus':
-            cartProducts[positionItemInCart].quantity = cartProducts[positionItemInCart].quantity =1;
+            cartProducts[positionItemInCart].quantity = cartProducts[positionItemInCart].quantity + 1;
             break;
             default:
                 let valueChange=cartProducts[positionItemInCart].quantity -1;
@@ -163,7 +163,7 @@ let changeQuantity = (productId,type) => {
                     cartProducts[positionItemInCart].quantity = valueChange;
                 }
                 else{
-                    cartProducts.slice(positionItemInCart,1)
+                    cartProducts.splice(positionItemInCart,1);
                 }
                 break;
         }
