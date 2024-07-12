@@ -29,7 +29,7 @@ p{
     color:rgb(65, 85, 69) ;
 }
 .products-list {
-    text-align: center;  
+    text-align: left;  
 }
 .products-list img{
 width: 180px;
@@ -45,16 +45,19 @@ border-radius: 15px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.cart-modal{
+.cart-modal-container{
     display: none;
+}
+.cart-modal{
+    display: grid;
     background-color: rgb(233, 221, 195);
+    inset: 0 0 0 auto;
     width: 400px;
     border-radius: 5%;
     position: fixed;
-    inset: 0 0 0 auto;
-    display: grid;
     grid-template-rows: 70px 1fr 70px;
     transition: -5s;
+
 }
 .cart-modal h2{
     text-align: center;
