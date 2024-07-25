@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1, 
+        "nombre": "Frasco de vidrio hermético",
+        "precio": 120, 
+        "cantidad":0,
+        "img": "./images/frasco-vidrio.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Popote de acero inoxidable",
+        "precio": 35,
+        "cantidad":0,
+        "img": "./images/straw.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Infusor de acero inoxidable",
+        "precio": 45,
+        "cantidad":0,
+        "img": "./images/infusor.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Bolsa de tela",
+        "precio": 345,
+        "cantidad":0,
+        "img": "./images/totebag.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Termo 450ml",
+        "precio": 360,
+        "cantidad":0,
+        "img": "./images/termo-inox.jpg"
+    }
+] 
