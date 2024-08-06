@@ -117,9 +117,8 @@ let cartHTML = () => {
               <span class="minus">-</span>
              <span>${cartProduct.quantity}</span>
               <span class="plus">+</span>
-             </div>
-      `
-         listCartProducts.appendChild(newCart);
+             </div>`
+         listCartProducts.appendChild(newCart);     
         })
     } 
 }
@@ -159,6 +158,7 @@ let changeQuantity = (productId, type) => {
     cartMemory();
     cartHTML();
 }
+
 /////////////////////LIBRERIAS////////////////////////////////
             Toastify({
                 text: "Envio gratis en compras mayores a $499",
