@@ -74,6 +74,14 @@ border-radius: 15px;
     font-weight:bolder;
     cursor: pointer;
 }
+
+.cart-modal .cart-checkout-btn button a {
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-weight: bold;
+
+}
 .cart-modal .cart-checkout-btn button:hover{
     background-color: white;
     color: rgb(50, 70, 54);
