@@ -141,8 +141,6 @@ function calculateTotal() {
     
     return total;
 }
-
-
 function updateTotal() {
     console.log(cartProducts); //////NO ESTA ENCONTRANDO LOS PRODUCTOS////
     let total = calculateTotal();

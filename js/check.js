@@ -42,13 +42,29 @@
 // }
 
 // addCartToHTML()
-////////////////////////INTENTO 2 ////////////////////////////////
 
+
+////////////////////////INTENTO 2 ////////////////////////////////
 let products = [];
 let cartProducts = [];
 
 let checkoutStorage = localStorage.getItem("cartProducts");
 checkoutStorage = JSON.parse(checkoutStorage);
+
+let initJSON = () =>{
+    fetch("./db/products.JSON")
+    .then(response => response.json())
+    .then(data => {
+        products=data;
+        renderCheckout();
+     if(localStorage.getItem('cartProducts')){
+        item = JSON.parse(localStorage.getItem('cartProducts'));
+        }
+    })
+    }
+initJSON();
+
+
 
    let checkoutContainer = document.querySelector ('.checkout-list');
     function renderCheckout (checkoutItems){
@@ -68,68 +84,5 @@ checkoutStorage = JSON.parse(checkoutStorage);
         renderCheckout(checkoutStorage)
 
         
-        let initJSON = () =>{
-            fetch("./db/products.JSON")
-            .then(response => response.json())
-            .then(data => {
-                products=data;
-                renderCheckout();
-             if(localStorage.getItem('cartProducts')){
-                item = JSON.parse(localStorage.getItem('cartProducts'));
-                }
-            })
-            }
-        initJSON();
         
-
-////////////////////////////////CHAT GPT////////////////////////
-// let products = [];
-
-// let initJSON = () => {
-//     fetch("./db/products.JSON")
-//         .then(response => response.json())
-//         .then(data => {
-//             products = data;
-//             renderCheckout(checkoutStorage);
-//             if(localStorage.getItem('cartProducts')){
-//                         item = JSON.parse(localStorage.getItem('cartProducts'));
-//                         } // Pasamos `checkoutStorage` como argumento
-//         })
-// }
-
-// initJSON();
-
-// let checkoutStorage = localStorage.getItem("cartProducts");
-// checkoutStorage = JSON.parse(checkoutStorage);
-
-// let checkoutContainer = document.querySelector(".checkout-list");
-
-// function renderCheckout(checkoutItems) {
-//     if (!checkoutItems || checkoutItems.length === 0) {
-//         console.error("No hay productos en el carrito para mostrar.");
-//         return;
-//     }
-
-//     checkoutItems.forEach(product => {
-//         let item = document.createElement("div");
-//         let productInfo = products.find(p => p.id === product.productId);
-
-//         if (productInfo) {
-//             item.innerHTML = `
-//                 <img src="${productInfo.img}" alt="">
-//                 <div class="item-info">
-//                     <div class="name">${productInfo.nombre}</div>
-//                     <div class="price">$${productInfo.precio}</div>
-//                 </div>
-//                 <div class="quantity">${product.quantity}</div>
-//                 <div class="total-price">$${productInfo.precio * product.quantity}</div>`;
-//             checkoutContainer.appendChild(item);
-//         }
-//     });
-// }
-
-// if (checkoutStorage && products.length > 0) {
-//     renderCheckout(checkoutStorage);
-// }
-
-
+        
