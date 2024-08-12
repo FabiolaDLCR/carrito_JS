@@ -113,20 +113,21 @@ let cartHTML = () => {
 }
 
 // Calcular el total a pagar
+
 function calculateTotal() {
     let total = 0;
+    
     cartProducts.forEach(cartProduct => {
-        let productInfo = products.find(product => product.id === cartProduct.productId);
+        let productInfo = products.find(product => product.id == cartProduct.productId);
+        
         if (productInfo) {
             total += productInfo.precio * cartProduct.quantity;
+        } else {
+            console.log("Producto no encontrado para el ID:", cartProduct.productId);
         }
     });
-    console.log("Total calculado:", total); // Verifica si el total es correcto
     return total;
 }
-
-console.log("Productos en el carrito:", cartProducts);
-console.log("Lista de productos:", products);
 
 // Actualizar el total en el modal
 function updateTotal() {
