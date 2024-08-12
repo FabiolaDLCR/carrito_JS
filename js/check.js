@@ -1,7 +1,7 @@
 let products = [];
 let cartProducts = [];
 
-// Cargar productos del JSON y los elementos del carrito desde localStorage
+/////// Cargar productos del JSON dese localStorage
 let initJSON = () => {
     fetch("./db/products.JSON")
     .then(response => response.json())
@@ -20,7 +20,7 @@ initJSON();
 
 let checkoutContainer = document.querySelector('.checkout-list');
 
-// Renderizar productos del carrito en la página de checkout
+////// Renderizar productos del checkout
 function renderCheckout(checkoutItems) {
     checkoutContainer.innerHTML = '';  
 
@@ -44,7 +44,7 @@ function renderCheckout(checkoutItems) {
     });
 }
 
-// Calcular y actualizar el total en el checkout
+////////// Calcular y actualizar el total en el checkout
 function calculateCheckoutTotal() {
     let total = 0;
 
