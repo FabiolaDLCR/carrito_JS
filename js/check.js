@@ -55,7 +55,7 @@ let initJSON = () =>{
     fetch("./db/products.JSON")
     .then(response => response.json())
     .then(data => {
-        products=data;
+        products = data;
         renderCheckout();
      if(localStorage.getItem('cartProducts')){
         item = JSON.parse(localStorage.getItem('cartProducts'));
@@ -83,6 +83,29 @@ initJSON();
     }
         renderCheckout(checkoutStorage)
 
+    //////////////////////intento 3 ///////////////////////////////
+        // let renderCheckout = () => {
+        //     if (cartProducts.length > 0) {
+        //         cartProducts.forEach (cartProduct => {
+        //             let item = document.createElement ("div");
+        //             item.classList.add ('checkout-item');
+        //             item.dataset.id = cartProduct.productId;
+        //             let positionProduct= products.findIndex((value) => value.id == cartProduct.productId);
+        //             let info = products[positionProduct];
+
+        //             item.innerHTML = `
+        //             <img src="${info.img}" alt="">
+        //             <div class="item-info">
+        //             <div class="name">${info.nombre}</div>
+        //              <div class="price">$${info.precio}</div>
+        //             </div>
+        //             <div class="quantity">${info.quantity}</div>
+        //             <div class="total-price">$${info.precio * info.quantity}</div>`
+        //             checkoutContainer.appendChild(item);
+        //         })
+        //     }
+        // }
         
-        
+        // renderCheckout();
+
         
