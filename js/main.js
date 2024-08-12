@@ -47,6 +47,7 @@ let initJSON = () =>{
      if(localStorage.getItem('cartProducts')){
         cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
         cartHTML();
+        updateTotal();
         }
     })
     }
@@ -85,6 +86,7 @@ else{
 
 
 cartHTML();
+updateTotal();
 ////////CART STORAGE//////////////////////
 cartMemory();
 }
@@ -117,11 +119,40 @@ let cartHTML = () => {
               <span class="minus">-</span>
              <span>${cartProduct.quantity}</span>
               <span class="plus">+</span>
-             </div>`
+             </div>
+`
          listCartProducts.appendChild(newCart);     
         })
     } 
 }
+
+/////////////////////TOTAL A PAGAR////////////////////////////
+
+function calculateTotal() {
+    let total = 0;
+    
+    cartProducts.forEach(cartProduct => {
+        let productInfo = products.find(product => product.id === cartProduct.productId);
+        
+        if (productInfo) {
+            total += productInfo.precio * cartProduct.quantity;
+        }
+    });
+    
+    return total;
+}
+
+
+function updateTotal() {
+    console.log(cartProducts); //////NO ESTA ENCONTRANDO LOS PRODUCTOS////
+    let total = calculateTotal();
+    let totalPriceElement = document.getElementById('total-price');
+    totalPriceElement.innerHTML = total.toFixed(2); 
+}
+
+
+////////////////////////////////////////////////////////////////
+
 
 listCartProducts.addEventListener ('click', (e) => {
     let positionClick = e.target;
@@ -157,7 +188,9 @@ let changeQuantity = (productId, type) => {
     }
     cartMemory();
     cartHTML();
+    updateTotal();
 }
+
 
 /////////////////////LIBRERIAS////////////////////////////////
             Toastify({
